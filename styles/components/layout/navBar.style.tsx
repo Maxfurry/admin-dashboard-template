@@ -8,8 +8,8 @@ export default css`
     margin-bottom: 0;
     padding: 0 10px;
     transition: all 0.2s ease;
-    z-index: 800;
     height: 70px;
+    overflow-x: hidden;
   }
   nav.top-navbar .navbar-container {
     display: flex;

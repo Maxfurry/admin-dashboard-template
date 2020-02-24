@@ -2,22 +2,13 @@ import css from "styled-jsx/css";
 
 export default css.global`
   #dashboard-layout {
-    display: flex;
+    display: block;
     width: 100vw;
     height: 100vh;
   }
-  #sidebar {
-    background-color: #fff;
-    transition: all 0.2s ease;
-    width: 280px;
-    z-index: 1000;
-    border-right: 1px solid rgba(0, 0, 0, 0.0625);
-  }
-  #sidebar .sidebar-menu {
-    padding: 10px;
-  }
   #page-component {
     width: 100%;
+    padding-left: 280px;
     transition: all 0.2s ease;
   }
   #page-component .main-content {
@@ -26,5 +17,56 @@ export default css.global`
     min-height: calc(100vh - 140px);
     width: 100%;
     background-color: #f9fafb;
+  }
+
+  @media screen and (max-width: 991px) {
+    #page-component {
+      padding-left: 0;
+    }
+
+    .open-close-sidebar #sidebar {
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1439px) {
+    #page-component {
+      padding-left: 70px;
+    }
+    #sidebar .sidebar-logo {
+      border-bottom: none;
+    }
+    #sidebar:hover .sidebar-logo {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
+    }
+
+    .open-close-sidebar #sidebar {
+      width: 280px !important;
+    }
+    .open-close-sidebar #sidebar .sidebar-logo {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
+    }
+    .open-close-sidebar #page-component {
+      padding-left: 280px;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .open-close-sidebar #sidebar {
+      width: 70px !important;
+    }
+    .open-close-sidebar #sidebar .sidebar-logo {
+      border: none;
+    }
+    .open-close-sidebar #page-component {
+      padding-left: 70px;
+    }
+
+    .open-close-sidebar #sidebar:hover {
+      width: 280px !important;
+    }
+    .open-close-sidebar #sidebar:hover .sidebar-logo {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
+    }
   }
 `;

@@ -1,4 +1,4 @@
-import { FC, ReactChild } from "react";
+import { FC, ReactChild, useState, MouseEvent } from "react";
 import Head from "next/head";
 
 import NavBar from "./NavBar";
@@ -12,8 +12,14 @@ interface Props {
   title?: string;
 }
 
-function sidebarToggle() {}
 const Layout: FC<Props> = ({ children, title = "Dashboard" }) => {
+  const [sidebarSwitch, setSidebarSwitchState] = useState(false);
+
+  function sidebarToggle(e: MouseEvent) {
+    e.preventDefault();
+    setSidebarSwitchState(!sidebarSwitch);
+  }
+
   return (
     <>
       <Head>
@@ -24,8 +30,11 @@ const Layout: FC<Props> = ({ children, title = "Dashboard" }) => {
         <link rel="stylesheet" href="font-awesome.css" />
       </Head>
 
-      <div id="dashboard-layout">
-        <SideBar />
+      <div
+        id="dashboard-layout"
+        className={`${sidebarSwitch && "open-close-sidebar"}`}
+      >
+        <SideBar sidebarToggle={sidebarToggle} />
 
         <div id="page-component">
           <NavBar sidebarToggle={sidebarToggle} />

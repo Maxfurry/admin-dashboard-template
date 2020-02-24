@@ -1,9 +1,13 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import Link from "next/link";
 
 import sidebarLogoStyle from "../../styles/components/layout/sideBarLogo.style";
 
-const Navbar: FC = () => {
+interface Props {
+  sidebarToggle: (event: MouseEvent<HTMLElement>) => void;
+}
+
+const Navbar: FC<Props> = ({ sidebarToggle }) => {
   return (
     <>
       <div className="sidebar-logo">
@@ -20,7 +24,7 @@ const Navbar: FC = () => {
           </Link>
         </div>
 
-        <div className="mobile-toggle">
+        <div className="mobile-toggle" onClick={sidebarToggle}>
           <a href="" style={{ textDecoration: "none" }}>
             <i className="ti-arrow-circle-left"></i>
           </a>
