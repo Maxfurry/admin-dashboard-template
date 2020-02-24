@@ -52,16 +52,8 @@ export default css`
   }
 
   @media screen and (max-width: 991px) {
-    .sidebar-logo {
-      width: 280px;
-    }
     .sidebar-logo .mobile-toggle {
       display: inline-block;
-    }
-  }
-  @media screen and (min-width: 992px) and (max-width: 1439px) {
-    .sidebar-logo .mobile-toggle {
-      display: none;
     }
   }
 `;
