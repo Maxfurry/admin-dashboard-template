@@ -13,11 +13,6 @@ export default css.global`
     z-index: 1000;
     border-right: 1px solid rgba(0, 0, 0, 0.0625);
   }
-  #sidebar .sidebar-logo {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.0625);
-    padding: 30px 20px;
-    transition: all 0.2s ease;
-  }
   #sidebar .sidebar-menu {
     padding: 10px;
   }
