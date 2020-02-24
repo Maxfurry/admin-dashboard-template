@@ -30,5 +30,6 @@ export default css.global`
     font-size: 14px;
     color: #7c8184;
     letter-spacing: 0.2px;
+    font-weight: 400;
   }
 `;

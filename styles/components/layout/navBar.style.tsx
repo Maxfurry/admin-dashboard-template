@@ -9,11 +9,12 @@ export default css`
     padding: 0;
     transition: all 0.2s ease;
     z-index: 800;
+    height: 70px;
   }
   nav.top-navbar .navbar-container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 30px;
+    padding: 20px;
   }
 `;
