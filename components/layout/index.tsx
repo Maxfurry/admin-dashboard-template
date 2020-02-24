@@ -12,6 +12,7 @@ interface Props {
   title?: string;
 }
 
+function sidebarToggle() {}
 const Layout: FC<Props> = ({ children, title = "Dashboard" }) => {
   return (
     <>
@@ -27,7 +28,7 @@ const Layout: FC<Props> = ({ children, title = "Dashboard" }) => {
         <SideBar />
 
         <div id="page-component">
-          <NavBar />
+          <NavBar sidebarToggle={sidebarToggle} />
           <div className="main-content">{children}</div>
           <Footer />
         </div>
