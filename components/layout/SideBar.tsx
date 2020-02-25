@@ -1,5 +1,6 @@
 import { FC, MouseEvent } from "react";
 import SideBarLogo from "./SideBarLogo";
+import SideBarMenu from "./SideBarMenu";
 
 import sideBarStyle from "../../styles/components/layout/sideBar.style";
 
@@ -12,7 +13,7 @@ const SideBar: FC<Props> = ({ sidebarToggle }) => {
     <>
       <div id="sidebar">
         <SideBarLogo sidebarToggle={sidebarToggle} />
-        <div className="sidebar-menu">Sidebar Menu</div>
+        <SideBarMenu />
       </div>
       <style jsx>{sideBarStyle}</style>
     </>

@@ -15,7 +15,7 @@ interface Props {
 const Layout: FC<Props> = ({ children, title = "Dashboard" }) => {
   const [sidebarSwitch, setSidebarSwitchState] = useState(false);
 
-  function sidebarToggle(e: MouseEvent) {
+  function sidebarToggle(e: MouseEvent): void {
     e.preventDefault();
     setSidebarSwitchState(!sidebarSwitch);
   }

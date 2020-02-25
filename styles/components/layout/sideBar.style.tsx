@@ -1,6 +1,6 @@
 import css from "styled-jsx/css";
 
-export default css`
+export default css.global`
   #sidebar {
     background-color: #fff;
     bottom: 0;
@@ -12,8 +12,20 @@ export default css`
     z-index: 1000;
     border-right: 1px solid rgba(0, 0, 0, 0.0625);
   }
-  #sidebar .sidebar-menu {
-    padding: 10px;
+  ul.sidebar-menu > li:first-child {
+    margin-top: 30px;
+  }
+  ul.sidebar-menu > li:last-child {
+    margin-bottom: 30px;
+  }
+  ul.sidebar-menu > li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+  ul.sidebar-menu > li.dropdown:hover > ul.dropdown-menu li.active > a {
+    font-weight: 500 !important;
+  }
+  ul.sidebar-menu > li.dropdown.open:hover > ul.dropdown-menu li.active > a {
+    font-weight: 550 !important;
   }
 
   @media screen and (max-width: 991px) {
@@ -29,6 +41,15 @@ export default css`
     }
     #sidebar:hover {
       width: 280px;
+    }
+    #sidebar:hover .sidebar-menu > li > a .title {
+      display: inline-block;
+    }
+    #sidebar:hover .sidebar-menu li.dropdown .arrow {
+      opacity: 1;
+    }
+    #sidebar:hover .sidebar-menu li.open > ul.dropdown-menu {
+      display: block !important;
     }
   }
 

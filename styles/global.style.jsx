@@ -32,4 +32,39 @@ export default css.global`
     letter-spacing: 0.2px;
     font-weight: 400;
   }
+
+  //////////////
+  .c-blue-500 {
+    color: #2196f3 !important;
+  }
+  .c-brown-500 {
+    color: #795548 !important;
+  }
+  .c-deep-orange-500 {
+    color: #ff5722 !important;
+  }
+  .c-deep-purple-500 {
+    color: #673ab7 !important;
+  }
+  .c-indigo-500 {
+    color: #3f51b5 !important;
+  }
+  .c-light-blue-50 {
+    color: #e1f5fe !important;
+  }
+  .c-pink-500 {
+    color: #e91e63 !important;
+  }
+  .c-orange-500 {
+    color: #ff9800 !important;
+  }
+  .c-purple-500 {
+    color: #9c27b0 !important;
+  }
+  .c-red-500 {
+    color: #f44336 !important;
+  }
+  .c-teal-500 {
+    color: #009688 !important;
+  }
 `;
