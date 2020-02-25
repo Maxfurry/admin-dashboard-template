@@ -9,7 +9,7 @@ interface Props {
 const Navbar: FC<Props> = ({ sidebarToggle }) => {
   const [isSearchInputActive, setSearchInputstate] = useState(false);
 
-  function searchToggle() {
+  function searchToggle(): void {
     setSearchInputstate(!isSearchInputActive);
   }
 
